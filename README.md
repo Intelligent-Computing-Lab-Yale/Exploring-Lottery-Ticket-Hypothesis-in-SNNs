@@ -17,11 +17,13 @@ python setup.py install
 ## Introduction 
 Spiking Neural Networks (SNNs) have recently emerged as a new generation of low-power deep neural networks, which is suitable to be implemented on low-power mobile/edge devices. As such devices have limited memory storage, neural pruning on SNNs has been widely explored in recent decades. Most existing SNN pruning works focus on shallow SNNs (2~6 layers), however, deeper SNNs (>16 layers) are proposed by state-of-the-art SNN works, which is difficult to be compatible with the current SNN pruning work. To scale up a pruning technique towards deep SNNs, we investigate Lottery Ticket Hypothesis (LTH) which states that dense networks contain smaller subnetworks (i.e., winning tickets) that achieve comparable performance to the dense networks. Our studies on LTH reveal that the winning tickets consistently exist in deep SNNs across various datasets and architectures, providing up to 97% sparsity without huge performance  degradation. However, the iterative searching process of LTH brings a huge training computational cost when combined with the multiple timesteps of SNNs. To alleviate such heavy searching cost, we propose Early-Time (ET) ticket where we find the important weight connectivity from a smaller number of timesteps. The proposed ET ticket can be seamlessly combined with a common pruning techniques for finding winning tickets,such as Iterative Magnitude Pruning (IMP) and Early-Bird (EB) tickets. 
 
-<img width="998" alt="Screen Shot 2022-07-18 at 10 39 46 AM" src="https://user-images.githubusercontent.com/41351363/179536311-714697ab-7355-42ae-942e-bbf8216a4e0e.png">
-
+<img width="995" alt="Screen Shot 2022-07-18 at 10 40 27 AM" src="https://user-images.githubusercontent.com/41351363/179536451-952aa7b7-59cc-4926-b70c-afa2d79fb825.png">
 
 ## Implementation 
 
+<img width="998" alt="Screen Shot 2022-07-18 at 10 39 46 AM" src="https://user-images.githubusercontent.com/41351363/179536311-714697ab-7355-42ae-942e-bbf8216a4e0e.png">
+
+›
 1) Iterative Magnitude Pruning (IMP)
 ```
 python train_snn_laterewindlth.py  --dataset 'cifar10' --arch 'vgg16' --optimizer 'sgd'  --batch_size 128 --learning_rate 3e-1 
