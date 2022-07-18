@@ -19,11 +19,12 @@ python setup.py install
 ```       
 
 
-## Implementation 
+## Training Code
+
+Here, we provide 4 cases (IMP, ET, IMP+EB, IMP+ET)
 
 <img width="998" alt="Screen Shot 2022-07-18 at 10 39 46 AM" src="https://user-images.githubusercontent.com/41351363/179536311-714697ab-7355-42ae-942e-bbf8216a4e0e.png">
 
-›
 1) Iterative Magnitude Pruning (IMP)
 ```
 python train_snn_laterewindlth.py  --dataset 'cifar10' --arch 'vgg16' --optimizer 'sgd'  --batch_size 128 --learning_rate 3e-1 
