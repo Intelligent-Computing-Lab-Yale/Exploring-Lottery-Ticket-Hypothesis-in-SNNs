@@ -1,5 +1,5 @@
-# Exploring-Lottery-Ticket-Hypothesis-in-Sparse-SNNs
-Exploring Lottery Ticket Hypothesis in Sparse Spiking Neural Networks (ECCV2022, oral presentation)
+# Exploring-Lottery-Ticket-Hypothesis-in-SNNs
+Exploring Lottery Ticket Hypothesis in Spiking Neural Networks (ECCV2022, oral presentation)
 
 
 ## Introduction 
